@@ -35,7 +35,7 @@ async function fetchCoupangProducts(targetUrls = COUPANG_TARGET_URLS, limit = 5)
 
     try {
         const run = await apify.actor(process.env.APIFY_COUPANG_ACTOR_ID!).call({
-            startUrls: targetUrls.map(url => ({ url })),
+            startUrls: targetUrls,  // 문자열 배열로 직접 전달
             maxItems: limit,
         });
 
