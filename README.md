@@ -38,3 +38,4 @@ pnpm bot               # 승인봇 상시 실행 (맥미니에서)
 | `TELEGRAM_CHAT_ID` | 텔레그램 채팅 ID |
 | `BLOGGER_BLOG_ID` | Blogger 블로그 ID |
 | `BLOGGER_ACCESS_TOKEN` | Blogger OAuth Access Token |
+# openclawtest2
