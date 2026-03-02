@@ -35,6 +35,8 @@ jobs:
       - name: Step 2 - Generate blog drafts with Gemini Pro
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL_PRIMARY: ${{ secrets.GEMINI_MODEL_PRIMARY }}
+          GEMINI_MODEL_FALLBACK: ${{ secrets.GEMINI_MODEL_FALLBACK }}
         run: pnpm tsx scripts/generate-blog.ts
 
       - name: Step 3 - Send drafts to Telegram for approval
