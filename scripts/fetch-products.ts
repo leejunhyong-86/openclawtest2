@@ -99,14 +99,17 @@ async function fetchAliProducts(keyword = 'hot deals', limit = 5): Promise<Produ
 
 async function main() {
     const coupangProducts = await fetchCoupangProducts(COUPANG_TARGET_URLS, 3);
-    const aliProducts = await fetchAliProducts('best seller', 2);
+
+    // 알리 Actor ID가 설정된 경우에만 수집
+    const aliProducts = process.env.APIFY_ALI_ACTOR_ID && process.env.APIFY_ALI_ACTOR_ID !== 'your_aliexpress_actor_id'
+        ? await fetchAliProducts('best seller', 2)
+        : [];
+
+    if (!process.env.APIFY_ALI_ACTOR_ID || process.env.APIFY_ALI_ACTOR_ID === 'your_aliexpress_actor_id') {
+        console.log('ℹ️  알리익스프레스 Actor ID 미설정 - 쿠팡만 수집합니다.');
+    }
 
     const allProducts = [...coupangProducts, ...aliProducts];
-
-    if (allProducts.length === 0) {
-        console.error('❌ 수집된 상품이 없습니다. Apify Actor ID와 API 키를 확인해주세요.');
-        process.exit(1);
-    }
 
     // data 폴더 생성 후 저장
     const dataDir = path.resolve(__dirname, '../data');
@@ -114,7 +117,13 @@ async function main() {
 
     const outputPath = path.join(dataDir, 'products.json');
     fs.writeFileSync(outputPath, JSON.stringify(allProducts, null, 2), 'utf-8');
-    console.log(`\n💾 ${allProducts.length}개 상품 저장 완료: ${outputPath}`);
+
+    if (allProducts.length === 0) {
+        console.warn('⚠️  수집된 상품이 없습니다. data/products.json에 빈 배열 저장.');
+        // exit(1) 제거 — 다음 단계에서 graceful 처리
+    } else {
+        console.log(`\n💾 ${allProducts.length}개 상품 저장 완료: ${outputPath}`);
+    }
 }
 
 main().catch(console.error);
