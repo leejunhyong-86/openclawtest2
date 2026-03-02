@@ -1,0 +1,6 @@
+.env
+.env.local
+node_modules/
+data/products.json
+data/drafts.json
+data/approved-drafts.json

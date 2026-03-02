@@ -1,0 +1,27 @@
+{
+	"name": "openclawtest2",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"fetch": "tsx scripts/fetch-products.ts",
+		"generate": "tsx scripts/generate-blog.ts",
+		"notify": "tsx scripts/notify-telegram.ts",
+		"post": "tsx scripts/post-blog.ts",
+		"bot": "tsx scripts/telegram-bot.ts",
+		"refresh-token": "tsx scripts/refresh-token.ts",
+		"start": "tsx scripts/fetch-products.ts && tsx scripts/generate-blog.ts && tsx scripts/notify-telegram.ts",
+		"bot:start": "tsx scripts/telegram-bot.ts"
+	},
+	"dependencies": {
+		"@google/genai": "^1.0.0",
+		"apify-client": "^2.9.0",
+		"dotenv": "^16.0.0",
+		"node-telegram-bot-api": "^0.66.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"@types/node-telegram-bot-api": "^0.64.0",
+		"tsx": "^4.0.0",
+		"typescript": "^5.0.0"
+	}
+}

@@ -1,0 +1,51 @@
+name: Daily Affiliate Blog Automation
+
+on:
+  schedule:
+    # 매일 오전 8시 KST (= UTC 23:00 전날)
+    - cron: '0 23 * * *'
+  workflow_dispatch: # 수동 실행 버튼
+
+jobs:
+  generate-and-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Step 1 - Fetch products from Apify
+        env:
+          APIFY_API_KEY: ${{ secrets.APIFY_API_KEY }}
+          APIFY_COUPANG_ACTOR_ID: ${{ secrets.APIFY_COUPANG_ACTOR_ID }}
+          APIFY_ALI_ACTOR_ID: ${{ secrets.APIFY_ALI_ACTOR_ID }}
+        run: pnpm tsx scripts/fetch-products.ts
+
+      - name: Step 2 - Generate blog drafts with Gemini Pro
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: pnpm tsx scripts/generate-blog.ts
+
+      - name: Step 3 - Send drafts to Telegram for approval
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: pnpm tsx scripts/notify-telegram.ts
+
+      - name: Upload drafts as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-drafts-${{ github.run_id }}
+          path: data/drafts.json
+          retention-days: 7
