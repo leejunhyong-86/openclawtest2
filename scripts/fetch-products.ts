@@ -34,27 +34,36 @@ async function fetchCoupangProducts(targetUrls = COUPANG_TARGET_URLS, limit = 5)
     console.log(`🛒 쿠팡 상품 수집 중... (${targetUrls.length}개 URL)`);
 
     try {
-        const run = await apify.actor(process.env.APIFY_COUPANG_ACTOR_ID!).call({
-            startUrls: targetUrls,  // 문자열 배열로 직접 전달
-            maxItems: limit,
+        const run = await apify.actor(process.env.APIFY_COUPANG_ACTOR_ID || 'apify/e-commerce-scraping-tool').call({
+            listingUrls: targetUrls.map(url => ({ url })),
+            maxProducts: limit,
+            proxyConfiguration: {
+                useApifyProxy: true,
+                apifyProxyGroups: ['RESIDENTIAL'],
+            },
         });
 
         const { items } = await apify.dataset(run.defaultDatasetId).listItems();
         console.log(`✅ 쿠팡 ${items.length}개 상품 수집 완료`);
 
-        return items.map((item: any) => ({
-            id: `CP_${item.productId || item.id || Date.now()}`,
-            title: item.productName || item.title || item.name || '',
-            price: item.price ?? item.salePrice ?? item.finalPrice ?? 0,
-            originalPrice: item.originalPrice ?? item.basePrice,
-            discountRate: item.discountRate ?? item.discount,
-            imageUrl: item.imageUrl || item.thumbnailUrl || item.image || '',
-            productUrl: item.productUrl || item.url || item.link || '',
-            platform: 'coupang' as const,
-            category: item.categoryName || item.category || '',
-            rating: item.rating ?? item.starRating,
-            reviewCount: item.reviewCount ?? item.ratingCount,
-        }));
+        return items.map((item: any) => {
+            // e-commerce-scraping-tool은 offers.price에 가격을 반환
+            const price = item.offers?.price ? parseFloat(item.offers.price) : 0;
+
+            return {
+                id: `CP_${item.id || Date.now()}`,
+                title: item.name || item.title || '',
+                price: price,
+                originalPrice: undefined, // 범용 스크래퍼에서는 기본적으로 미제공되는 경우가 많음
+                discountRate: undefined,
+                imageUrl: item.image || '',
+                productUrl: item.url || '',
+                platform: 'coupang' as const,
+                category: item.category || '',
+                rating: item.aggregateRating?.ratingValue || undefined,
+                reviewCount: item.aggregateRating?.reviewCount || undefined,
+            };
+        });
     } catch (err) {
         console.error('쿠팡 수집 실패:', err);
         return [];

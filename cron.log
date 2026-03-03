@@ -1,0 +1,840 @@
+=======================================
+[28555(date)] 🚀 블로그 자동 포스팅 스케줄러 시작
+
+> openclawtest2@1.0.0 start /Users/leejunhyong/antigravity/openclawtest2
+> tsx scripts/fetch-products.ts && tsx scripts/generate-blog.ts && tsx scripts/notify-telegram.ts
+
+🛒 쿠팡 상품 수집 중... (2개 URL)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:05.675Z ACTOR: Pulling container image of build 5NUkpJveJyYOF7Na3 from registry.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:05.677Z ACTOR: Creating container.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:05.770Z ACTOR: Starting container.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:07.146Z [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.239Z [32mINFO[39m  System info[90m {"apifyVersion":"3.5.0","apifyClientVersion":"2.17.0","crawleeVersion":"3.15.1","osType":"Linux","nodeVersion":"v22.20.0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.282Z [32mINFO[39m  Starting Coupang scraper ✅
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.343Z [32mINFO[39m  ⏳ Warming up session...
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.671Z [32mINFO[39m  Warm-up complete (status 403). Session ready.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.736Z [32mINFO[39m  Crawler live. Fetching pages now.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:08.893Z [32mINFO[39m [33m CheerioCrawler:[39m Starting the crawler.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:12.077Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:12.079Z [90m {"id":"oQvwU7oZ0UpBxcJ","url":"https://www.coupang.com/np/categories/115573","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:12.477Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:12.479Z [90m {"id":"wBa6aw6lj2anm1b","url":"https://www.coupang.com/np/categories/185755","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:15.110Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:15.112Z [90m {"id":"oQvwU7oZ0UpBxcJ","url":"https://www.coupang.com/np/categories/115573","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.447Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.449Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.451Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.453Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.454Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.456Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"oQvwU7oZ0UpBxcJ","url":"https://www.coupang.com/np/categories/115573","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/115573|attempt=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.458Z [33mWARN[39m [33m CheerioCrawler:[39m The 'error' property of the crawling context is deprecated, and it is now passed as the second parameter in 'errorHandler' and 'failedRequestHandler'. Please update your code, as this property will be removed in a future version.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.460Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:20.461Z [32mINFO[39m  Retrying direct page after network issue (attempt 1 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:24.438Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:24.440Z [90m {"id":"irbKt0xTvZy1AwJ","url":"https://www.coupang.com/np/categories/115573","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:28.997Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:29.000Z [90m {"id":"irbKt0xTvZy1AwJ","url":"https://www.coupang.com/np/categories/115573","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.099Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.101Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.103Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.105Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.106Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.108Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"irbKt0xTvZy1AwJ","url":"https://www.coupang.com/np/categories/115573","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/115573|networkAttempt=1|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.110Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:33.111Z [32mINFO[39m  Retrying direct page after network issue (attempt 2 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:58.736Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:17:58.738Z [90m {"id":"gO0MNNTspfHwHlD","url":"https://www.coupang.com/np/categories/115573","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:02.989Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:02.991Z [90m {"id":"gO0MNNTspfHwHlD","url":"https://www.coupang.com/np/categories/115573","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.219Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.221Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.223Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.224Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.226Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.228Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"gO0MNNTspfHwHlD","url":"https://www.coupang.com/np/categories/115573","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/115573|networkAttempt=2|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.230Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:07.232Z [32mINFO[39m  Retrying direct page after network issue (attempt 3 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:08.894Z [32mINFO[39m [33m CheerioCrawler:Statistics:[39m CheerioCrawler request statistics:[90m {"requestAvgFailedDurationMillis":4383,"requestAvgFinishedDurationMillis":null,"requestsFinishedPerMinute":0,"requestsFailedPerMinute":2,"requestTotalDurationMillis":13150,"requestsTotal":3,"crawlerRuntimeMillis":60159,"retryHistogram":[null,null,3]}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:08.915Z [32mINFO[39m [33m CheerioCrawler:AutoscaledPool:[39m state[90m {"currentConcurrency":2,"desiredConcurrency":2,"systemStatus":{"isSystemIdle":true,"memInfo":{"isOverloaded":false,"limitRatio":0.2,"actualRatio":0},"eventLoopInfo":{"isOverloaded":false,"limitRatio":0.7,"actualRatio":0},"cpuInfo":{"isOverloaded":false,"limitRatio":0.4,"actualRatio":0},"clientInfo":{"isOverloaded":false,"limitRatio":0.3,"actualRatio":0}}}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:11.103Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:11.105Z [90m {"id":"3PxzICXXQDixY5t","url":"https://www.coupang.com/np/categories/115573","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:12.040Z [33mWARN[39m  Warm-up request for session failed: The proxy responded with 590 UPSTREAM503: . Continuing with scraping.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:13.620Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:13.622Z [90m {"id":"3PxzICXXQDixY5t","url":"https://www.coupang.com/np/categories/115573","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.588Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Detected a session error, rotating session...
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.590Z Proxy responded with 595 ECONNRESET: 0 bytes.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.592Z
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.594Z Below is the first 100 bytes of the proxy response body:
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.595Z
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.597Z
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:44.599Z [90m {"id":"3PxzICXXQDixY5t","url":"https://www.coupang.com/np/categories/115573","retryCount":3}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.109Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.111Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.113Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.114Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.116Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.118Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"3PxzICXXQDixY5t","url":"https://www.coupang.com/np/categories/115573","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/115573|networkAttempt=3|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.120Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:47.122Z [33mWARN[39m  Reached network recovery limit for direct page after 3 attempts. Giving up on this request.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:18:57.042Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. request timed out after 45 seconds.[90m {"id":"wBa6aw6lj2anm1b","url":"https://www.coupang.com/np/categories/185755","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.257Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.259Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.261Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.263Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.264Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.266Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"wBa6aw6lj2anm1b","url":"https://www.coupang.com/np/categories/185755","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/185755|attempt=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.268Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:01.270Z [32mINFO[39m  Retrying direct page after network issue (attempt 1 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:05.124Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:05.127Z [90m {"id":"b1okb1afR1tyZHA","url":"https://www.coupang.com/np/categories/185755","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:06.285Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:06.286Z [90m {"id":"b1okb1afR1tyZHA","url":"https://www.coupang.com/np/categories/185755","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:08.896Z [32mINFO[39m [33m CheerioCrawler:Statistics:[39m CheerioCrawler request statistics:[90m {"requestAvgFailedDurationMillis":3911,"requestAvgFinishedDurationMillis":null,"requestsFinishedPerMinute":0,"requestsFailedPerMinute":2,"requestTotalDurationMillis":19556,"requestsTotal":5,"crawlerRuntimeMillis":120160,"retryHistogram":[null,null,4,1]}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:08.918Z [32mINFO[39m [33m CheerioCrawler:AutoscaledPool:[39m state[90m {"currentConcurrency":1,"desiredConcurrency":2,"systemStatus":{"isSystemIdle":true,"memInfo":{"isOverloaded":false,"limitRatio":0.2,"actualRatio":0},"eventLoopInfo":{"isOverloaded":false,"limitRatio":0.7,"actualRatio":0},"cpuInfo":{"isOverloaded":false,"limitRatio":0.4,"actualRatio":0},"clientInfo":{"isOverloaded":false,"limitRatio":0.3,"actualRatio":0}}}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.616Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.618Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.619Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.621Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.623Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.625Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"b1okb1afR1tyZHA","url":"https://www.coupang.com/np/categories/185755","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/185755|networkAttempt=1|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.626Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:09.628Z [32mINFO[39m  Retrying direct page after network issue (attempt 2 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:22.402Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:22.404Z [90m {"id":"esIq3FfYm4j62Dn","url":"https://www.coupang.com/np/categories/185755","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:26.672Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:26.674Z [90m {"id":"esIq3FfYm4j62Dn","url":"https://www.coupang.com/np/categories/185755","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:29.997Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:29.999Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.001Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.002Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.005Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.017Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"esIq3FfYm4j62Dn","url":"https://www.coupang.com/np/categories/185755","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/185755|networkAttempt=2|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.018Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:30.020Z [32mINFO[39m  Retrying direct page after network issue (attempt 3 of 3).
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:34.888Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:34.890Z [90m {"id":"FlWF3dZKI4HwMm8","url":"https://www.coupang.com/np/categories/185755","retryCount":1}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:36.945Z [33mWARN[39m [33m CheerioCrawler:[39m Reclaiming failed request back to the list or queue. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:36.947Z [90m {"id":"FlWF3dZKI4HwMm8","url":"https://www.coupang.com/np/categories/185755","retryCount":2}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.564Z [31mERROR[39m[33m CheerioCrawler:[39m Request failed and reached maximum retries. Error: Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.566Z     at CheerioCrawler._throwOnBlockedRequest (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.568Z     at CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/http/internals/http-crawler.js:324:22)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.569Z     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.571Z     at async CheerioCrawler._runRequestHandler (/usr/src/app/node_modules/@crawlee/cheerio/internals/cheerio-crawler.js:153:9)
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.572Z     at async wrap (/usr/src/app/node_modules/@apify/timeout/cjs/index.cjs:54:21)[90m {"id":"FlWF3dZKI4HwMm8","url":"https://www.coupang.com/np/categories/185755","method":"GET","uniqueKey":"https://www.coupang.com/np/categories/185755|networkAttempt=3|empty=0"}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.574Z [33mWARN[39m  Request exhausted retries for direct page. Request blocked - received 403 status code.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.575Z [33mWARN[39m  Reached network recovery limit for direct page after 3 attempts. Giving up on this request.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.600Z [32mINFO[39m [33m CheerioCrawler:[39m All requests from the queue have been processed, the crawler will shut down.
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.873Z [32mINFO[39m [33m CheerioCrawler:[39m Final request statistics:[90m {"requestsFinished":0,"requestsFailed":8,"retryHistogram":[null,null,7,1],"requestAvgFailedDurationMillis":3525,"requestAvgFinishedDurationMillis":null,"requestsFinishedPerMinute":0,"requestsFailedPerMinute":3,"requestTotalDurationMillis":28200,"requestsTotal":8,"crawlerRuntimeMillis":151138}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.875Z [32mINFO[39m [33m CheerioCrawler:[39m Error analysis:[90m {"totalErrors":8,"uniqueErrors":1,"mostCommonErrors":["8x: Request blocked - received 403 status code. (/usr/src/app/node_modules/@crawlee/basic/internals/basic-crawler.js:899:19)"]}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.877Z [32mINFO[39m [33m CheerioCrawler:[39m Finished! Total 8 requests: 0 succeeded, 8 failed.[90m {"terminal":true}[39m
+[36mcoupang-scraper runId:7utjfTCgusnC5Yc6x -> [39m2026-03-02T10:19:39.884Z [32mINFO[39m  All done! ✨ We saved 0 results in about 152 seconds. Great success! ✌️
+✅ 쿠팡 0개 상품 수집 완료
+ℹ️  알리익스프레스 Actor ID 미설정 - 쿠팡만 수집합니다.
+⚠️  수집된 상품이 없습니다. data/products.json에 빈 배열 저장.
+📝 0개 상품의 블로그 초안을 생성합니다...
+
+
+💾 블로그 초안 0개 저장 완료: /Users/leejunhyong/antigravity/openclawtest2/data/drafts.json
+📨 0개의 블로그 초안을 텔레그램으로 전송합니다...
+
+
+✅ 모든 초안 전송 완료! 텔레그램에서 승인해 주세요.
+[28555(date)] ❌ 에러 발생. 로그를 확인하세요.
+=======================================
+[38711(date)] 🚀 블로그 자동 포스팅 스케줄러 시작
+
+> openclawtest2@1.0.0 start /Users/leejunhyong/antigravity/openclawtest2
+> tsx scripts/fetch-products.ts && tsx scripts/generate-blog.ts && tsx scripts/notify-telegram.ts
+
+🛒 쿠팡 상품 수집 중... (2개 URL)
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:03.320Z ACTOR: Pulling container image of build oJNFPw5Ubsm5PcQhO from registry.
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:03.322Z ACTOR: Creating container.
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:03.390Z ACTOR: Starting container.
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:03.390Z ACTOR: Running under "LIMITED_PERMISSIONS" permission level.
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:04.879Z [32mINFO[39m  System info[90m {"apifyVersion":"3.4.2","apifyClientVersion":"2.12.6","crawleeVersion":"3.13.9","osType":"Linux","nodeVersion":"v22.22.0"}[39m
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:04.932Z [32mINFO[39m  Actor is starting...
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:30.629Z [32mINFO[39m  Found 14 products in the listing page: https://www.coupang.com/np/categories/115573. Page: 1
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:33.949Z [32mINFO[39m  Found 120 products in the listing page: https://www.coupang.com/np/categories/185755. Page: 1
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:45.489Z [32mINFO[39m  Product handled: https://shop.coupang.com/missha/251651?source=brandstore_display_ads&adType=DA&eventId=X5C09DWnhvwe22Yu&from=home_C2&traid=home_C2&trcid=11685958
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:45.719Z [32mINFO[39m  Product handled: https://shop.coupang.com/samsungkorea/291279?source=brandstore_display_ads&adType=DA&eventId=ZGZH14sFSn9laavh&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:45.951Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8933714480?vendorItemId=93107978291&sourceType=HOME_GW_PROMOTION&searchId=feed-c15cf49473394854b0fe352ee3c2c218-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:46.304Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8795096974?vendorItemId=92213254126&sourceType=HOME_GW_PROMOTION&searchId=feed-c15cf49473394854b0fe352ee3c2c218-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:46.859Z [32mINFO[39m  Product handled: https://shop.coupang.com/philipsda/249967?source=brandstore_display_ads&adType=DA&eventId=6jktTz7CtrRfvTQZ&from=home_C2&traid=home_C2&trcid=11686602
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:47.903Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/172058172?vendorItemId=4246423944&sourceType=HOME_GW_PROMOTION&searchId=feed-c15cf49473394854b0fe352ee3c2c218-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:48.381Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6591086274?vendorItemId=82112038895&sourceType=HOME_GW_PROMOTION&searchId=feed-c15cf49473394854b0fe352ee3c2c218-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:51.532Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/297554137?itemId=937317710&vendorItemId=5321005477&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-9dc7-a214d1930146&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:51.630Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6784091584?itemId=15964681527&vendorItemId=82091059433&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-80e0-fd61cae9def1&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:51.634Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/2058504807?itemId=3498657424&vendorItemId=71484852755&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-9edd-27bef2044a78&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:51.830Z [32mINFO[39m  Product handled: https://travel.coupang.com/np/products/10000011368434?itemId=20002210359894&vendorItemId=70000285510371&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:51.930Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1621073966?itemId=25627873633&vendorItemId=92618071072&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-add3-446f9daf8da0&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.049Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8946089480?itemId=26397724952&vendorItemId=94725002015&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-9a6b-342197d6f536&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.053Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8776109870?itemId=25531896036&vendorItemId=92523598371&sourceType=srp_product_ads&clickEventId=5ea077c0-169c-11f1-8b11-12c52401ec48&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.131Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5465167053?itemId=8375545680&vendorItemId=75663257639&sourceType=srp_product_ads&clickEventId=5e9fdb80-169c-11f1-a9a3-f5987113483d&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.396Z [32mINFO[39m  Product handled: https://shop.coupang.com/pulmuonefood/86323?source=brandstore_display_ads&adType=DA&eventId=BAwzGlKX74RvSyJx&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.442Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6566317259?itemId=16302141887&vendorItemId=92077562433&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-b372-5f10d6cbcec1&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.453Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6859642904?itemId=16371985018&vendorItemId=90888962571&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-b8d0-18ad28f7950b&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.573Z [32mINFO[39m  Product handled: https://travel.coupang.com/np/products/10000011327634?itemId=20002205285603&vendorItemId=70000283190902&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.909Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6410839795?itemId=15763419762&vendorItemId=82976836242&sourceType=srp_product_ads&clickEventId=5ea029a0-169c-11f1-8bf6-a913d595b133&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:52.929Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6363834948?itemId=13447210700&vendorItemId=80701663082&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-adb5-3b14809e4816&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:53.075Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7990602816?itemId=24030267591&vendorItemId=89256623918&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-a04b-c3e084588e74&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:53.208Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6269247211?itemId=12811822439&vendorItemId=80077741963&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-9a07-b205989e0a0c&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:53.329Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1594106470?itemId=7713528031&vendorItemId=75003732294&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-b2bb-6bfc1fe5806b&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:53.343Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/2131548412?itemId=3618377708&vendorItemId=81959665027&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-82a0-e6d67779b232&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:53.457Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/164925395?itemId=473015302&vendorItemId=85022601594&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-bb14-2205446a19a4&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:54.156Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8570539610?itemId=24733185951&vendorItemId=93604116679&sourceType=srp_product_ads&clickEventId=5e9f8d60-169c-11f1-aa5d-e7e1a449b3f7&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:54.309Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6269634144?itemId=12814290322&vendorItemId=3042426774&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-ab2b-2bc75d84a961&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:54.330Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5673595090?itemId=27376747809&vendorItemId=92193790626&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-9f56-e76279ae3671&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:54.530Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9090061510?itemId=26713041943&vendorItemId=93684680629&sourceType=srp_product_ads&clickEventId=5ea1b040-169c-11f1-8246-9e8b4b7dd2e9&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:55.136Z [32mINFO[39m  Product handled: https://shop.coupang.com/A00148950/276232?source=brandstore_display_ads&adType=DA&eventId=FNSExnn8UWyiupxC&from=home_C2&traid=home_C2&trcid=11673132
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:55.471Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5910687545?itemId=26663493193&vendorItemId=93635860769&sourceType=srp_product_ads&clickEventId=5ea1d750-169c-11f1-8c4a-6e4ad383219e&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:55.517Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6740198015?itemId=11595693718&vendorItemId=83932917795&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-87b7-c0c467628d52&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:55.842Z [32mINFO[39m  Product handled: https://shop.coupang.com/pgkr/455137?source=brandstore_display_ads&adType=DA&eventId=C3TcaqQg2ei5VpqF&from=home_C2&traid=home_C2&trcid=11684919
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:55.947Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6735538766?itemId=15705560444&vendorItemId=82919868559&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-bbc8-4198cbec9c3a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:56.051Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6872800373?itemId=16446916642&vendorItemId=83637545408&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-9cec-08aa9b04b1fb&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:56.129Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8457551670?itemId=24463643123&vendorItemId=92176518829&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-b565-8138bdb63062&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:56.282Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7660979010?itemId=23574310556&vendorItemId=87492245531&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-925f-ced666cf4458&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:56.752Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6688261563?itemId=15580155285&vendorItemId=82799222154&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-8c20-cc9b8af89a24&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:57.369Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8674824737?vendorItemId=92179723863&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.169:jikgu_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:57.433Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8067867920?itemId=25781491567&vendorItemId=94362937282&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-92a1-cece6b978a8a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:57.783Z [32mINFO[39m  Product handled: https://shop.coupang.com/pulmuonefood/86323?source=brandstore_display_ads&adType=DA&eventId=8KanZKDaWZssEC1K&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:57.884Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8587834570?itemId=25390228821&vendorItemId=92383973892&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-96e6-7e6300eb4aaa&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:57.893Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8415304435?itemId=24335096182&vendorItemId=91793984135&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-87c3-ae13b9ee92aa&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.149Z [32mINFO[39m  Product handled: https://shop.coupang.com/missha/251651?source=brandstore_display_ads&adType=DA&eventId=ojPQZDJRYAVWTFcq&from=home_C2&traid=home_C2&trcid=11685958
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.229Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1105139273?itemId=24421167671&vendorItemId=91435561485&sourceType=srp_product_ads&clickEventId=5ea077c0-169c-11f1-b0ed-cbdaa596a406&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.355Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1356970188?itemId=2387519462&vendorItemId=70383032335&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-8985-807ef3c9fa4a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.362Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/4504462184?itemId=5411830519&vendorItemId=74012271149&sourceType=srp_product_ads&clickEventId=5e9fdb80-169c-11f1-b032-0dce82d0606c&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.430Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7969522174?vendorItemId=89115276691&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.169:jikgu_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.833Z [32mINFO[39m  Product handled: https://travel.coupang.com/np/products/10000011240833?itemId=20002209834157&vendorItemId=70000285245195&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.837Z [32mINFO[39m  Product handled: https://travel.coupang.com/np/products/10000010831631?itemId=20002057404964&vendorItemId=70000151538141&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.930Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8529253500?itemId=24694860335&vendorItemId=89625752062&sourceType=srp_product_ads&clickEventId=5e9f8d60-169c-11f1-9973-045eaf546c99&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:58.962Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9292057510?vendorItemId=89362951818&sourceType=HOME_GW_PROMOTION&searchId=feed-c15cf49473394854b0fe352ee3c2c218-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.072Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9000313355?itemId=26374675733&vendorItemId=94725884865&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-a766-d02afb05c352&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.128Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7972960095?itemId=22086497996&vendorItemId=89133532011&sourceType=srp_product_ads&clickEventId=5e9ea300-169c-11f1-aefb-189896ea8b26&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.150Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6107949593?itemId=11492581261&vendorItemId=78767865318&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-803c-e0244b25b769&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.416Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9063277300?itemId=26611209124&vendorItemId=93587263955&sourceType=srp_product_ads&clickEventId=5ea2c1b0-169c-11f1-8e24-03e0b9db4ad4&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.460Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6921869752?itemId=24127823999&vendorItemId=91146860007&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-bd3c-11ba4aa5168d&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.744Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8316525885?itemId=24001451598&vendorItemId=92424956041&sourceType=srp_product_ads&clickEventId=5e9ea300-169c-11f1-90e6-8f6ae057dc66&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.829Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/3961975?itemId=14104387226&vendorItemId=81351466902&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-932c-52a3364430fb&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.831Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1105132134?itemId=20769976172&vendorItemId=92189880376&sourceType=srp_product_ads&clickEventId=5ea077c0-169c-11f1-a14e-f5c429002a35&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:00:59.832Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6074108948?itemId=11227399696&vendorItemId=82491572913&sourceType=srp_product_ads&clickEventId=5ea029a0-169c-11f1-9b1d-ca843dcecd2b&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:00.053Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6456391389?itemId=24630074021&vendorItemId=91641113846&sourceType=srp_product_ads&clickEventId=5ea0c5e0-169c-11f1-8d6f-a7a09bf0a205&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:00.069Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/172058172?vendorItemId=4246423944&sourceType=HOME_GW_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:00.237Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6716081929?itemId=15608256115&vendorItemId=82826456961&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-86d0-6bbf9200c609&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:00.331Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8249757585?itemId=23748751513&vendorItemId=90773293511&sourceType=srp_product_ads&clickEventId=5ea11400-169c-11f1-bd69-9aff6efd9001&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:00.447Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/108464267?itemId=3986588559&vendorItemId=71970895125&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-81f3-7e9ad70feff0&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:01.170Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6731658803?itemId=15687049312&vendorItemId=82901994810&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-b491-6f65af061df5&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:01.619Z [32mINFO[39m  Product handled: https://shop.coupang.com/henkelhcb/255686?source=brandstore_display_ads&adType=DA&eventId=sVM1VEIlKQZycVt1&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:02.731Z [32mINFO[39m  Product handled: https://shop.coupang.com/akbeauty/487868?source=brandstore_display_ads&adType=DA&eventId=0xVdznUNENjca4IY&from=home_C2&traid=home_C2&trcid=11684809
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:03.262Z [32mINFO[39m  Product handled: https://shop.coupang.com/marskorea/314820?source=brandstore_display_ads&adType=DA&eventId=HyFJsmw21qEkk1Nf&from=home_C2&traid=home_C2&trcid=11673021
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:03.420Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8776309055?itemId=25532712114&vendorItemId=92524394615&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-810f-92e0544516d4&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:03.510Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1797920512?itemId=227565598&vendorItemId=94770903508&sourceType=srp_product_ads&clickEventId=5ea029a0-169c-11f1-95cf-057dce369ea4&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:04.621Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6744060603?itemId=25558309630&vendorItemId=85937356723&sourceType=srp_product_ads&clickEventId=5ea11400-169c-11f1-9885-4a7bedc91596&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:05.021Z [32mINFO[39m  Product handled: https://pages.coupang.com/p/163895?adType=DA&eventId=cojYuJmVBOO2CcMA&from=home_C2&traid=home_C2&trcid=11673123
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:05.498Z [32mINFO[39m  Product handled: https://pages.coupang.com/p/165555?adType=DA&eventId=YqLs0EYZybk4UFpm&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:08.306Z [32mINFO[39m  Product handled: https://pages.coupang.com/p/163895?adType=DA&eventId=STSmldxLht117ULa&from=home_C2&traid=home_C2&trcid=11673123
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:08.804Z [32mINFO[39m  Product handled: https://shop.coupang.com/A00237509/455043?source=brandstore_display_ads&adType=DA&eventId=gOjy0zGjnDPMBgMF&from=home_C2&traid=home_C2&trcid=11673003
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:09.791Z [32mINFO[39m  Product handled: https://shop.coupang.com/philipsda/249967?source=brandstore_display_ads&adType=DA&eventId=3FoBA7WszXFuqBmF&from=home_C2&traid=home_C2&trcid=11686602
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:10.736Z [32mINFO[39m  Product handled: https://shop.coupang.com/A00237509/455043?source=brandstore_display_ads&adType=DA&eventId=cZwjNvjO5yTDvOxE&from=home_C2&traid=home_C2&trcid=11673003
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:11.252Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9039939765?itemId=26523137349&vendorItemId=93497453691&sourceType=srp_product_ads&clickEventId=5ea29aa0-169c-11f1-bb4d-598fc9e2ff0a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:11.846Z [32mINFO[39m  Product handled: https://shop.coupang.com/akbeauty/487868?source=brandstore_display_ads&adType=DA&eventId=cEEaI7ZGWLwnqQ1F&from=home_C2&traid=home_C2&trcid=11684809
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:13.073Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/2286158722?itemId=3929689460&vendorItemId=71914199012&sourceType=srp_product_ads&clickEventId=5ea050b0-169c-11f1-990b-b45536485d02&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:14.008Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8585057150?itemId=26818461111&vendorItemId=93788671168&sourceType=srp_product_ads&clickEventId=5e9ea300-169c-11f1-b6c0-ca4c26c63dc8&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:14.071Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7623792865?itemId=20218464790&vendorItemId=82989333155&sourceType=srp_product_ads&clickEventId=5ea29aa0-169c-11f1-80d5-578f1ed7ae63&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:14.650Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1934625314?itemId=3283993893&vendorItemId=71270973709&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-937a-2ea56a4c5ea2&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:15.100Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6716292207?itemId=15609143992&vendorItemId=82827319481&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-bb6d-0fce80e455a7&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:15.630Z [32mINFO[39m  Product handled: https://shop.coupang.com/A00181474?source=brandstore_display_ads&adType=DA&eventId=Fsk3CPGPEFia7twz&from=home_C2&traid=home_C2&trcid=11686198
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:15.971Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8473955766?vendorItemId=94055584615&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.169:jikgu_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:16.229Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/181981575?itemId=522347757&vendorItemId=4351244353&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-8948-935227855e4f&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:16.384Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8776275465?itemId=25532567086&vendorItemId=93425846694&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-9fc8-686586f2387f&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:16.698Z [32mINFO[39m  Product handled: https://travel.coupang.com/np/products/10000011357585?itemId=20002207166328&vendorItemId=70000283925415&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:16.841Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9206978360?itemId=27191825775&vendorItemId=94176577294&sourceType=srp_product_ads&clickEventId=5ea1b040-169c-11f1-8721-83f8b17695dc&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.088Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9271206840?itemId=27440009365&vendorItemId=94426966534&sourceType=srp_product_ads&clickEventId=5ea1b040-169c-11f1-81eb-d79fadfe2382&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.118Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6835662555?itemId=16239734710&vendorItemId=83433138376&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-9f8b-3a92ac0d210d&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.454Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1720261672?itemId=2928496444&vendorItemId=70917116139&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-9765-780529d4189e&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.609Z [32mINFO[39m  Product handled: https://shop.coupang.com/marskorea/314820?source=brandstore_display_ads&adType=DA&eventId=7QAEI0p2RNL1ZB1C&from=home_C2&traid=home_C2&trcid=11673021
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.634Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/1048947?itemId=4493401&vendorItemId=3007935762&sourceType=srp_product_ads&clickEventId=5e9f1830-169c-11f1-a682-9fb629bcfc98&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:17.672Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7481220910?itemId=22892829793&vendorItemId=89927384800&sourceType=srp_product_ads&clickEventId=5e9f8d60-169c-11f1-8dd9-302b25bb1496&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.140Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5696057697?itemId=19157914097&vendorItemId=82627313680&sourceType=srp_product_ads&clickEventId=5e9fdb80-169c-11f1-965f-7f637bccfa1c&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.188Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6436851910?itemId=13917140739&vendorItemId=91429558585&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-b8f6-e5615c920226&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.196Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6055400314?itemId=10904324104&vendorItemId=74346039008&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-9478-24b9aa060f94&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.500Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6579091427?itemId=14797671309&vendorItemId=82037493806&sourceType=srp_product_ads&clickEventId=5e9f1830-169c-11f1-92b9-0539ec955d0a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.775Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6245899352?itemId=12634067238&vendorItemId=79901677102&sourceType=srp_product_ads&clickEventId=5e9f6650-169c-11f1-a3a5-e7bb5ec8369e&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:18.921Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8056327270?itemId=22700116361&vendorItemId=89735745925&sourceType=srp_product_ads&clickEventId=5ea11400-169c-11f1-a637-d4ff68950b1f&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:19.156Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/2044945904?itemId=3283700885&vendorItemId=71270681804&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-bb3c-141cb3b495db&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:19.691Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8521164829?vendorItemId=92212923438&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.169:jikgu_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:20.175Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8795096974?vendorItemId=92213254126&sourceType=HOME_GW_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:20.263Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8719222595?itemId=25325966864&vendorItemId=92320856543&sourceType=srp_product_ads&clickEventId=5ea2c1b0-169c-11f1-85cf-de31729f95ae&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:20.448Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8281254495?itemId=2979249945&vendorItemId=70219845842&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-bf38-62453e0b3c61&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:20.754Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9041502483?vendorItemId=93127479663&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.169:jikgu_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.046Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8519808310?itemId=27258546816&vendorItemId=94235668791&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-9f28-c71a694d0dcb&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.145Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8933714480?vendorItemId=93107978291&sourceType=HOME_GW_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.532Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9351544290?itemId=27742914330&vendorItemId=94703972027&sourceType=srp_product_ads&clickEventId=5ea29aa0-169c-11f1-93c9-627219574075&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.585Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9087113625?itemId=27587668534&vendorItemId=94838270573&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-95f1-4d2b632464fa&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.597Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7645316485?itemId=17681248182&vendorItemId=84580929226&sourceType=srp_product_ads&clickEventId=5ea0ecf0-169c-11f1-b79f-904e0ea986df&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.773Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6591086274?vendorItemId=82112038895&sourceType=HOME_GW_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:21.838Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9292057510?vendorItemId=89362951818&sourceType=HOME_GW_PROMOTION&searchId=feed-03bf0158d5b04d8387fb9a4ab5ba1d52-3.33.107:gw_promotion
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:22.338Z [32mINFO[39m  Product handled: https://shop.coupang.com/A00003619/488043?source=brandstore_display_ads&adType=DA&eventId=JFom7SFV2wMDqcP8&from=home_event_banner&traid=home_event_banner
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:22.414Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5054681588?itemId=6821461104&vendorItemId=74114102583&sourceType=srp_product_ads&clickEventId=5ea029a0-169c-11f1-bac8-e8005e0a1378&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:22.473Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6859450457?itemId=25505418132&vendorItemId=92497474826&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-a851-6a75fc438456&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:22.532Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/7961310585?itemId=22011384367&vendorItemId=90727259949&sourceType=srp_product_ads&clickEventId=5ea09ed0-169c-11f1-8bba-7571f35e26bb&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:23.275Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/6843044337?itemId=16277776291&vendorItemId=87441356830&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-8d59-2173aa2b3354&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:23.384Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/9150763280?itemId=26945113274&vendorItemId=93914271640&sourceType=srp_product_ads&clickEventId=5ea1b040-169c-11f1-a8c9-6bafecad53ff&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:24.766Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8665933585?itemId=25756141230&vendorItemId=90028384487&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-959e-03661b1bb3f3&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:24.925Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8110827345?itemId=24817945000&vendorItemId=91825356496&sourceType=srp_product_ads&clickEventId=5e9ea300-169c-11f1-93af-d597ae8c8f2d&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:24.994Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8609333765?itemId=24969201150&vendorItemId=93497644311&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-998a-ece21d51bbb7&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:25.630Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5227992515?itemId=7351325456&vendorItemId=82964156644&sourceType=srp_product_ads&clickEventId=5ea1b040-169c-11f1-bd55-020aaa66b867&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:25.912Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8337736795?itemId=24719272895&vendorItemId=92548041397&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-8038-3e68a3ae739c&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:26.338Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/98481350?itemId=302070329&vendorItemId=82027638070&sourceType=srp_product_ads&clickEventId=5e9f3f40-169c-11f1-ab6e-5de33a9760da&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:29.284Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8736621145?itemId=25390863176&vendorItemId=92382415567&sourceType=srp_product_ads&clickEventId=5ea2c1b0-169c-11f1-9dad-341857e40873&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:31.746Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/8483937927?itemId=24636025507&vendorItemId=91657378897&sourceType=srp_product_ads&clickEventId=5e9fb470-169c-11f1-a818-5234beba909c&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:32.790Z [32mINFO[39m  Product handled: https://www.coupang.com/vp/products/5653986495?itemId=9212031662&vendorItemId=76497721368&sourceType=srp_product_ads&clickEventId=5e9fdb80-169c-11f1-9315-6bf65494200a&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:48.497Z [33mWARN[39m  No response received for product page. Please verify. URL: https://travel.coupang.com/np/products/10000011338953?itemId=20002204714192&vendorItemId=70000282890804&from=home_CategoryBest_ranking&traid=home_CategoryBest_ranking
+[36me-commerce-scraping-tool runId:mmW2fANQ44cwQHPiL -> [39m2026-03-03T01:01:48.648Z [32mINFO[39m  Actor is finishing...
+✅ 쿠팡 133개 상품 수집 완료
+ℹ️  알리익스프레스 Actor ID 미설정 - 쿠팡만 수집합니다.
+
+💾 133개 상품 저장 완료: /Users/leejunhyong/antigravity/openclawtest2/data/products.json
+📝 133개 상품의 블로그 초안을 생성합니다...
+
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "잡티 고민 끝! 미샤 비타씨플러스 2종 세트, 안 쓰면 손해인 이유"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: ""이 가격 실화?" 삼성전자 역대급 할인, 놓치면 평생 후회!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내 차의 부족한 2%를 채워 줄 만 원대 꿀템! 피라모니 차량용 콘솔쿠션 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "마트보다 신선해요! 8천원대 갓성비 친환경 양배추 3kg 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "믿고 쓰는 필립스 가전, 쿠팡에서 '0원'으로 먼저 찜하는 법"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "새 학기 어린이집 준비물 끝판왕! 5천원대 네임코코 방수네임스티커"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "신혼부부 냄비세트 고민 끝! 네오플램 IH 5종 세트 하나면 OK"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "사진 조명, 더 이상 고개 숙이지 마세요! 갓성비 끝판왕 어댑터 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "책상 위 혼돈, 2천 원대 '프로비즈 클리어파일' 하나로 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "좁은 책상, 거북목 탈출! 코시 키보드 트레이 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "롯데월드 3만원대 특가! 2026년까지 쓰는 종합이용권 꿀팁"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "가성비 로션 정착템! 네이처리퍼블릭 어린녹차 순한 에멀전 쟁여두기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "바닥 매트리스 생활 청산! 6만 원대 가성비 철제 침대프레임 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "유럽여행 필수템! 3만원대 mddas 반달 크로스백, 이걸로 종결!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "7천 원대 득템! 우리 댕댕이, 봄나들이 인싸되는 데님 치마"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리집 떡국 맛의 비결, 풀무원 찰 떡국떡 1kg 솔직 후기!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "다이어트 성공, 이 '식단 노트' 하나로 시작하세요! (제이로그)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "감성 캠핑의 완성, 20만원대 8각 대형 쉘터 '나스카피 라피네 돔텐트' 솔직 리뷰"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "아직도 정가? 한국민속촌 자유이용권 1만원대 할인 꿀팁 (3월 한정)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "이 퀄리티에 8,800원? 샵 갈 돈 아껴주는 셀프 젤네일 인생템"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "메리크리스마스 현수막, 이거 하나면 연말 파티 준비 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "캐모마일 씨앗, 이 대용량 팩 하나면 올 한 해 허브티 걱정 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "[육아꿀템] 아기 외출이 편안해지는 비밀! 아가프라 휴대용 젖병 워머"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "찢어짐 걱정 끝! 코멧 배접 쓰레기 비닐봉투 100L 찐후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "니로 플러스 오너 필수템! 4만원대 코일매트로 실내 업그레이드"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "카페 감성, 1만 원대 화장실표지판 하나로 완성! (내돈내산 후기)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "밤낚시 챔질 성공률 200%? 9천원대 월척수배 스마트 센서찌 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "하루 190원의 행복! 곰도리 스팀 온열안대로 눈 피로 싹~"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "가성비 갑! 2만원대 낚시, 갯벌체험 필수템 PVC가슴장화 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "보이넥스트도어 앨범 The Action, 특별 사은품 3종 받고 가장 싸게 사는 법!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "빼빼로데이 선물 고민 끝! 편지까지 가능한 가성비 세트"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "결정장애 필수템? 선택의 순간, 답을 알려주는 YES OR NO 코인"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "음악에 맞춰 춤추는 LED, 1만 원대로 밋밋한 내 차가 클럽 변신!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내 브라운 면도기가 바디 트리머로? 가성비 끝판왕 06-BDT 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "층간소음 걱정 끝! 메트로놈 내장 티올리 드럼패드 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "스포티지 오너 필수템! 4만원대 확장형 코일매트, 이걸로 끝내세요."
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "짠 음식 먹은 다음 날 필수템! 다이톡스 리베인정 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "스마트폰에 혹사당한 내 눈, 이 영양제 하나로 관리 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "커피 들고 폰 보며 산책? 만 원의 행복, 펫스츄리 핸즈프리 리드줄"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "이 가격 실화? 만 원도 안 되는 감성 주방템, 에나멜 냄비"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "바쁜데 식사는 챙겨야죠? 정식품 그린비아 영양케어 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "떡국 맛집 우리집, 비결은 바로 풀무원 찰 떡국떡! (솔직 후기)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "힘없는 머리카락, 두피부터 관리! 메시엘 헤어토닉 찐후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "부모님 선물 고민 끝! 딱딱하지 않고 맛있는 '이동엽의 즉석강정' 찐후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "잡티 지우개? 미샤 비타씨플러스 2종 세트, 지금 사야 하는 이유"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "주방이 깔끔해지는 마법! 타파 웨어 원형볼 반찬통 솔직 리뷰"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "5만원대 가성비 갑! 로망스 조립형 서랍장 하나로 방 정리 끝"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "셀프 커트 필수템! 만 원으로 전문가 손길, 하나비 바리깡빗 504"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "5천원대 가성비 끝판왕! 매일 착용해도 예쁜 925 큐빅 원터치 귀걸이"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "CGV 영화, 아직도 정가 내고 보세요? 만 원으로 즐기는 꿀팁!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "도심 속 바다 여행, 코엑스 아쿠아리움 할인 예매로 알뜰하게!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "베개 유목민 생활 청산! 슬립앤슬립 깊은잠 베개 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "목이 칼칼할 때? 제가 항상 챙기는 '인생 목캔디' 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "허리 통증 끝! 6만원대 가성비 KURUA 포켓스프링 매트리스 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "여행의 질을 바꾸는 단 하나의 선택, 스위스밀리터리 캐리어 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "대형견도 안심! 튼튼한 강아지 리드줄, 독스랩 로프 PRO 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "13,900원 실화? 퀄리티 미친 가성비 후리스 플리스집업 추천!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "애플워치, 단 1초 만에 명품 시계로 변신? 가성비 끝판왕 스트랩"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "1만원대 남자 카고 청바지, 편안함과 스타일 둘 다 잡는 비결?"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "매일 피곤한 나를 위한 투자, 얼라이브 원스데일리 여성 멀티비타민 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "왜 다들 '타파웨어' 하는지 알겠어요! 모듈러보울 김치통 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "칙칙한 영상은 끝! 3만원대 뽀샤시 인생샷, PULUZ 개인방송조명"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 아이 꽈당! 걱정 끝, 아이끌레 W형 모서리 보호대 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "육아맘 필수템! 5천원대 갓성비 방수네임스티커, 잃어버릴 걱정 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내 차가 5성급 호텔 침실로? 설레노 차박 평탄화 보드 솔직 후기!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "목욕바구니 곰팡이, 이제 안녕! 9,800원 인생템 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "튼튼한 코바늘 가방 뜨개실 추천! 동방 18합 색사 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "식탁 위 귀여움 폭발! 원형 손잡이 캐릭터 앞접시 4종 세트 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "화장실 청소, 더는 땀 흘리지 마세요! 브레프 세정제 0원 찬스!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "AGE20'S 팩트가 공짜? 쿠팡 뷰티풀데 역대급 0원 득템 찬스!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "쿠팡 한국마즈 역대급 혜택! 댕냥이 간식부터 초콜릿까지"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "좁은 주방의 구세주! 300kg 버티는 만능 주방 수납장 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "미가비 로즈워터 토너, 8천원대 가성비 끝판왕! 내돈내산 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 아기 첫 젖병, 배앓이 걱정 끝! 하이비 볼빵곰 젖병 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "라면값 아끼는 특급 비법! 쿠팡 팔도 기획전 놓치면 손해!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "부모님 선물 고민 끝! 쿠팡 대상웰라이프 기획전 특가 총정리"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "밥상 고민 끝! 쿠팡 0원 '건강 레시피' 무료 전자책 받으세요"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "세노비스 베스트셀러, 현명하게 고르는 3가지 꿀팁 (품절주의!)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "덩어리 없는 완벽한 스무디, 필립스 믹서기 하나면 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "지친 당신을 위한 선택, 세노비스 베스트셀러! 왜 다들 찾을까?"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 딸 '인싸' 등원룩, 3만원대 세트로 한 번에 해결!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "[긴급] 품절대란 AGE20'S 에센스 팩트, 쿠팡에서 0원에 득템하세요!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "잡티, 다크서클 싹! 케이트 스틱 컨실러 하나로 끝내는 무결점 피부"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "꾸안꾸 끝판왕! 비보뉴 남성 트레이닝복세트, 후회 없는 선택일까? (솔직 후기)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리아이 등원룩 고민 끝! 메르시보꾸 컬리지치렝스셋 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "쿠팡 0원딜 실화? 놓치면 후회하는 오늘의 역대급 득템 찬스!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "더뉴 셀토스 튜닝, 9만원으로 실내 고급감 200% 올리는 법"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "놓치면 후회! 쿠팡이 콕 찍은 (주)헤르젠 혜택, 안 보면 손해예요!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "1만원대 갓성비! 입는 순간 꾸안꾸, HANLIN 레이어드 배색 가디건"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "세탁세제 유목민 정착템? 만원대 짐승용량 줌 베이직 액체세제 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "팬트리 정리함 유목민 정착템! 2만원대 데미무드 서랍형 정리함 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "[긴급] 에버랜드 이용권 0원? 26년까지 쓰는 역대급 꿀팁!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "2026 공기업 NCS 합격, '초록이' 한 권으로 기초 끝내기!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "2026 전기기사 실기, 이것만은 꼭 보세요! 합격생 강력 추천 교재"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "만 원도 안돼? 우리집 살림꾼, 한샘 수납 바스켓 찐후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "김장철 필수템! 70cm 초대형 스텐 양푼, 이걸로 고민 끝!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "쿠팡 한국마즈 역대급 혜택! 놓치면 후회할 초특가 꿀팁 총정리"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "골프 스코어, 아직도 헷갈리시나요? 타바타 전자식 타수계산기 GV-0906 솔직 후기!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "부모님 선물 고민 끝! 정원삼 6년근 고려홍삼정 스틱 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 강아지 눈물 자국, 이 유기농 사료 바꾸고 광명 찾았어요!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "똥손도 금손되는 마법! 2만원대 가성비 다이어리 꾸미기 세트 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "50만원 명품 도마, 돈 아깝지 않을까? 우드리아 엔드그레인 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "어린이집 입학선물 고민 끝! 센스 만점 '디자인아지트 네임연필' 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "SUV 루프 세차, 발끝으로 낑낑대셨죠? 이거 하나면 해결! (카자리코 차량 도어 스텝 후기)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내돈내산 휴지 유목민 정착템! 코멧 코지 파우더 3겹 화장지 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 아기 첫 바디워시, 아무거나 쓸 수 없죠? 나투라비타 저자극 올인원 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "손목 아프게 젓지 마세요! 원터치 자동 믹싱컵 하나로 삶의 질 상승"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "속 편한 하루의 비밀! 1만원대 국내산 친환경 양배추 3kg 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "활동량 많은 우리 아이 신발, 이걸로 정착! 르까프 아동 운동화 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "바쁜 아침 5분 완성! 포스트 아몬드 후레이크 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "패션의 완성은 양말! 나이키 에브리데이 에센셜 양말 세트 찐후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "까슬거림 ZERO! 인생 이너 목폴라, 1+1 갓성비로 쟁여두세요."
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내 차 수납력 200% 상승! 1만원대 피라모니 차량용 컵홀더 팔걸이"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 아이 봄옷, 2만원도 안 되는 '갓성비' 맨투맨으로 종결!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "올가을 교복템! 퀄리티로 압도하는 국내생산 특양면 맨투맨 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "한입에 쏙! 입 심심할 때 딱 좋은 오예스 미니 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "주방의 품격을 바꾸는 선택, 네오플램 IH 인덕션 냄비세트 5종 솔직 리뷰"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "내 가방 속 상쾌함 치트키, 리콜라 레몬민트 캔디 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "물 한 병 값도 아까울 때, 프리미엄 천연 광천수 0원에 마시는 꿀팁"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "똥손도 금손되는 마법! 8천원 헤어뽕 볼륨핀이면 끝"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "냉장고 열 때마다 한숨? CKLIVING 정리용기 하나로 신세계 경험하세요!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "7만원대 퀄리티 실화? 고급미 넘치는 중년여성 숄더백 발견!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "겨울 산행, 2만원으로 든든하게! 시마운트 등산 아이젠 추천"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "보이넥스트도어 5집 'THE ACTION' 프레임 버전, 홀로그램 슬리브 득템 찬스!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "잡초 걱정 끝! 덩굴해란초 씨앗으로 초록 융단 정원 만들기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "아직도 무거운 가방 드세요? 3만원대 휘뚜루마뚜루 데일리백 끝판왕!"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 집을 은혜로운 공간으로! 캔버스 성경말씀액자 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "거룩한 예식을 어디서든, 품격있는 태현 휴대용 성찬기 세트 꼼꼼 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "다이어트 정체기, 프리미엄 솔루션 '소우코우 이소비텍신' 어때요?"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "아오맥스 부력보조복, 우리 아이 안전한 물놀이 필수템! (3만원대 가성비 후기)"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "우리 딸, 동화 속 공주님으로 변신! 인생샷 보장 샤 드레스"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "아이가 입이 떡 벌어져요! 씽크토이 다이노파크 그레이쉬사우루스 솔직 후기"
+🤖 모델 시도: gemini-2.5-pro (시도 1/3)
+✍️  블로그 초안 생성 완료: "댕댕이 목 조임 걱정 끝! 예쁘고 편한 올치 강아지 하네스 추천"
+
+💾 블로그 초안 133개 저장 완료: /Users/leejunhyong/antigravity/openclawtest2/data/drafts.json
+📨 133개의 블로그 초안을 텔레그램으로 전송합니다...
+
+📨 텔레그램 전송 완료: 초안 #1
+📨 텔레그램 전송 완료: 초안 #2
+TelegramError: ETELEGRAM: 400 Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 488
+    at /Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/node-telegram-bot-api@0.66.0_request@2.88.2/node_modules/node-telegram-bot-api/src/telegram.js:316:15
+    at tryCatcher (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/async.js:102:5)
+    at Async.drainQueues (/Users/leejunhyong/antigravity/openclawtest2/node_modules/.pnpm/bluebird@3.7.2/node_modules/bluebird/js/release/async.js:15:14)
+    at process.processImmediate (node:internal/timers:504:21) {
+  code: 'ETELEGRAM',
+  response: <ref *1> IncomingMessage {
+    _events: {
+      close: [Array],
+      error: [Function (anonymous)],
+      data: [Function (anonymous)],
+      end: [Array],
+      readable: undefined
+    },
+    _readableState: ReadableState {
+      highWaterMark: 65536,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      Symbol(kState): 194779004
+    },
+    _maxListeners: undefined,
+    socket: null,
+    httpVersionMajor: 1,
+    httpVersionMinor: 1,
+    httpVersion: '1.1',
+    complete: true,
+    rawHeaders: [
+      'Server',
+      'nginx/1.18.0',
+      'Date',
+      'Tue, 03 Mar 2026 02:12:09 GMT',
+      'Content-Type',
+      'application/json',
+      'Content-Length',
+      '137',
+      'Connection',
+      'keep-alive',
+      'Strict-Transport-Security',
+      'max-age=31536000; includeSubDomains; preload',
+      'Access-Control-Allow-Origin',
+      '*',
+      'Access-Control-Expose-Headers',
+      'Content-Length,Content-Type,Date,Server,Connection'
+    ],
+    rawTrailers: [],
+    joinDuplicateHeaders: undefined,
+    aborted: false,
+    upgrade: false,
+    url: '',
+    method: null,
+    statusCode: 400,
+    statusMessage: 'Bad Request',
+    client: TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.telegram.org',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.telegram.org',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      parser: null,
+      _httpMessage: null,
+      timeout: 0,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): null,
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    _consuming: false,
+    _dumped: false,
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 4190,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'POST /bot8796085212:AAHWTfjcq3PPo1Oqye25XasbwsFZlFZEpZk/sendMessage HTTP/1.1\r\n' +
+        'host: api.telegram.org\r\n' +
+        'content-type: application/x-www-form-urlencoded\r\n' +
+        'content-length: 4190\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'POST',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/bot8796085212:AAHWTfjcq3PPo1Oqye25XasbwsFZlFZEpZk/sendMessage',
+      _ended: true,
+      res: [Circular *1],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'api.telegram.org',
+      protocol: 'https:',
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    _eventsCount: 4,
+    request: Request {
+      _events: [Object: null prototype],
+      _eventsCount: 5,
+      _maxListeners: undefined,
+      method: 'POST',
+      simple: false,
+      resolveWithFullResponse: true,
+      forever: true,
+      readable: true,
+      writable: true,
+      explicitMethod: true,
+      _qs: [Querystring],
+      _auth: [Auth],
+      _multipart: [Multipart],
+      _redirect: [Redirect],
+      _tunnel: [Tunnel],
+      _rp_resolve: [Function (anonymous)],
+      _rp_reject: [Function (anonymous)],
+      _rp_promise: [Promise [Object]],
+      _rp_callbackOrig: undefined,
+      callback: [Function (anonymous)],
+      _rp_options: [Object],
+      headers: [Object],
+      setHeader: [Function (anonymous)],
+      hasHeader: [Function (anonymous)],
+      getHeader: [Function (anonymous)],
+      removeHeader: [Function (anonymous)],
+      localAddress: undefined,
+      pool: [Object],
+      dests: [],
+      __isRequestRequest: true,
+      _callback: [Function: RP$callback],
+      uri: [Url],
+      proxy: null,
+      tunnel: true,
+      setHost: true,
+      originalCookieHeader: undefined,
+      _disableCookies: true,
+      _jar: undefined,
+      port: 443,
+      host: 'api.telegram.org',
+      body: 'parse_mode=Markdown&reply_markup=%7B%22inline_keyboard%22%3A%5B%5B%7B%22text%22%3A%22%E2%9C%85%20%EB%A7%81%ED%81%AC%20%EC%97%86%EC%9D%B4%20%EB%B0%94%EB%A1%9C%20%ED%8F%AC%EC%8A%A4%ED%8C%85%22%2C%22callback_data%22%3A%22approve_no_link_2%22%7D%2C%7B%22text%22%3A%22%E2%9C%8F%EF%B8%8F%20%EB%A7%81%ED%81%AC%20%EC%9E%85%EB%A0%A5%20%ED%9B%84%20%ED%8F%AC%EC%8A%A4%ED%8C%85%22%2C%22callback_data%22%3A%22input_link_2%22%7D%5D%2C%5B%7B%22text%22%3A%22%E2%9D%8C%20%EC%9D%B4%20%EA%B8%80%20%EA%B1%B4%EB%84%88%EB%9C%80%22%2C%22callback_data%22%3A%22reject_2%22%7D%5D%5D%7D&chat_id=8231490947&text=%F0%9F%93%9D%20%2A%5B%EB%B8%94%EB%A1%9C%EA%B7%B8%20%ED%8F%AC%EC%8A%A4%ED%8C%85%20%EC%B4%88%EC%95%88%20%233%5D%2A%0A%0A%F0%9F%8F%B7%20%2A%EC%A0%9C%EB%AA%A9%3A%2A%20%EB%82%B4%20%EC%B0%A8%EC%9D%98%20%EB%B6%80%EC%A1%B1%ED%95%9C%202%25%EB%A5%BC%20%EC%B1%84%EC%9B%8C%20%EC%A4%84%20%EB%A7%8C%20%EC%9B%90%EB%8C%80%20%EA%BF%80%ED%85%9C%21%20%ED%94%BC%EB%9D%BC%EB%AA%A8%EB%8B%88%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EC%BD%98%EC%86%94%EC%BF%A0%EC%85%98%20%EC%86%94%EC%A7%81%20%ED%9B%84%EA%B8%B0%0A%0A%F0%9F%9B%92%20%2A%EC%83%81%ED%92%88%3A%2A%20%ED%94%BC%EB%9D%BC%EB%AA%A8%EB%8B%88%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EC%BB%B5%ED%99%80%EB%8D%94%20%EC%88%98%EB%82%A9%20%ED%8C%94%EA%B1%B8%EC%9D%B4%20%EC%BD%98%EC%86%94%EC%BF%A0%EC%85%98%2C%201%EA%B0%9C%2C%20%EB%B8%94%EB%9E%99...%0A%F0%9F%92%B0%20%2A%EA%B0%80%EA%B2%A9%3A%2A%2013%2C070%EC%9B%90%0A%F0%9F%93%A6%20%2A%ED%94%8C%EB%9E%AB%ED%8F%BC%3A%2A%20%EC%BF%A0%ED%8C%A1%0A%F0%9F%94%97%20%2A%EC%9B%90%EB%B3%B8%20URL%3A%2A%20https%3A%2F%2Fwww.coupang.com%2Fvp%2Fproducts%2F8933714480%3FvendorItemId%3D93107978291%26sourceType%3DHOME_GW_PROMOTION%26searchId%3Dfeed-c15cf49473394854b0fe352ee3c2c218-3.33.107%253Agw_promotion%0A%0A%F0%9F%93%84%20%2A%EB%B3%B8%EB%AC%B8%20%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0%20%28%EC%B2%AB%20200%EC%9E%90%29%3A%2A%0A%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%21%20%EC%9A%B4%EC%A0%84%20%EA%B2%BD%EB%A0%A5%20N%EB%85%84%20%EC%B0%A8%2C%20%EC%9E%90%EB%8F%99%EC%B0%A8%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%20%EC%8B%9C%EA%B0%84%EC%9D%B4%20%EB%A7%8E%EC%9D%80%20%EC%A0%84%EB%AC%B8%20%EB%A6%AC%EB%B7%B0%20%EB%B8%94%EB%A1%9C%EA%B1%B0%EC%9E%85%EB%8B%88%EB%8B%A4.%0A%0A%EC%9A%B4%EC%A0%84%ED%95%A0%20%EB%95%8C%EB%A7%88%EB%8B%A4%20%ED%98%B9%EC%8B%9C%20%EC%9D%B4%EB%9F%B0%20%EC%83%9D%EA%B0%81%20%EC%95%88%20%ED%95%B4%EB%B3%B4%EC%85%A8%EB%82%98%EC%9A%94%3F%20%22%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8%20%ED%95%9C%20%EC%9E%94%20%EC%83%80%EB%8A%94%EB%8D%B0%2C%20%EA%B8%B0%EC%A1%B4%20%EC%BB%B5%ED%99%80%EB%8D%94%EB%8A%94%20%EC%9D%B4%EB%AF%B8%20%ED%85%80%EB%B8%94%EB%9F%AC%EA%B0%80%20%EC%B0%A8%EC%A7%80%ED%95%98%EA%B3%A0%20%EC%9E%88%EB%84%A4%E2%80%A6%22%2C%20%22%EC%9E%A5%EA%B1%B0%EB%A6%AC%20%EC%9A%B4%EC%A0%84%ED%95%98%EB%8A%94%EB%8D%B0%20%ED%8C%94%EA%B1%B8%EC%9D%B4%EA%B0%80%20%EB%84%88%EB%AC%B4%20%EB%82%AE%EC%95%84%EC%84%9C%20%EC%96%B4%EA%B9%A8%EA%B0%80%20%EC%95%84%ED%94%84%EB%8B%A4%22%2C%20%22%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%2C%20%EC%A7%80%EA%B0%91%2C%20%EC%B0%A8%20%ED%82%A4%EB%8A%94%20%EC%99%9C%20%EB%A7%A8%EB%82%A0%20%EC%A1%B0%EC%88%98%EC%84%9D%20%EC%8B%9C%ED%8A%B8%20%EC%9C%84%EC%97%90%EC%84%9C%20%EA%B5%B4%EB%9F%AC%EB%8B%A4%EB%8B%90%EA%B9%8C%3F%22%0A%0A%EC%9D%B4%EB%9F%B0%20%EC%86%8C%EC%86%8C%ED%95%98...%0A%0A%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%0A%E2%9A%A0%EF%B8%8F%20%2A%5BPhase%200%20-%20%EC%88%98%EB%8F%99%20%EB%A7%81%ED%81%AC%20%ED%95%84%EC%9A%94%5D%2A%0A%EC%95%84%EB%9E%98%20%EB%A7%81%ED%81%AC%20%EB%B3%80%ED%99%98%EA%B8%B0%EC%97%90%EC%84%9C%20%EC%96%B4%ED%95%84%EB%A6%AC%EC%97%90%EC%9D%B4%ED%8A%B8%20%EB%A7%81%ED%81%AC%EB%A5%BC%20%EB%A7%8C%EB%93%A4%EC%96%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94%3A%0A%0A%F0%9F%94%97%20%EC%BF%A0%ED%8C%A1%20%ED%8C%8C%ED%8A%B8%EB%84%88%EC%8A%A4%3A%20https%3A%2F%2Fpartners.coupang.com%0A%0A%EB%B3%80%ED%99%98%EB%90%9C%20%EB%A7%81%ED%81%AC%EB%A5%BC%20%EC%95%84%EB%9E%98%20%5B%E2%9C%8F%EF%B8%8F%20%EB%A7%81%ED%81%AC%20%EC%9E%85%EB%A0%A5%5D%20%EB%B2%84%ED%8A%BC%EC%9D%84%20%EB%88%8C%EB%9F%AC%20%EB%B6%99%EC%97%AC%EB%84%A3%EC%96%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94.',
+      path: '/bot8796085212:AAHWTfjcq3PPo1Oqye25XasbwsFZlFZEpZk/sendMessage',
+      httpModule: [Object],
+      agentClass: [Function: Agent],
+      agentOptions: [Object],
+      agent: [Agent],
+      _started: true,
+      href: 'https://api.telegram.org/bot8796085212:AAHWTfjcq3PPo1Oqye25XasbwsFZlFZEpZk/sendMessage',
+      req: [ClientRequest],
+      ntick: true,
+      response: [Circular *1],
+      originalHost: 'api.telegram.org',
+      originalHostHeaderName: 'host',
+      responseContent: [Circular *1],
+      _destdata: true,
+      _ended: true,
+      _callbackCalled: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    toJSON: [Function: responseToJSON],
+    caseless: Caseless { dict: [Object] },
+    body: {
+      ok: false,
+      error_code: 400,
+      description: "Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 488"
+    },
+    Symbol(shapeMode): true,
+    Symbol(kCapture): false,
+    Symbol(kHeaders): {
+      server: 'nginx/1.18.0',
+      date: 'Tue, 03 Mar 2026 02:12:09 GMT',
+      'content-type': 'application/json',
+      'content-length': '137',
+      connection: 'keep-alive',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'Content-Length,Content-Type,Date,Server,Connection'
+    },
+    Symbol(kHeadersCount): 16,
+    Symbol(kTrailers): null,
+    Symbol(kTrailersCount): 0
+  }
+}
+[38711(date)] ❌ 에러 발생. 로그를 확인하세요.
