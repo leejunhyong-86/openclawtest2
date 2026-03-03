@@ -15,28 +15,30 @@ export async function sendDraftForApproval(draft: BlogDraft, index: number): Pro
     const platformName = draft.product.platform === 'coupang' ? '쿠팡' : '알리';
     const priceStr = draft.product.price.toLocaleString('ko-KR');
 
+    // 특수문자 이스케이프 (Markdown 없이 일반 텍스트 사용)
+    const safeTitle = draft.title.replace(/[*_`[\]()]/g, ' ');
+    const safeProductTitle = draft.product.title.substring(0, 60).replace(/[*_`[\]()]/g, ' ');
+    const safePreview = draft.content.substring(0, 200).replace(/[*_`[\]()]/g, ' ');
+
     const message = [
-        `📝 *[블로그 포스팅 초안 #${index + 1}]*`,
+        `📝 [블로그 포스팅 초안 #${index + 1}]`,
         ``,
-        `🏷 *제목:* ${draft.title}`,
+        `🏷 제목: ${safeTitle}`,
         ``,
-        `🛒 *상품:* ${draft.product.title.substring(0, 60)}...`,
-        `💰 *가격:* ${priceStr}원`,
-        `📦 *플랫폼:* ${platformName}`,
-        `🔗 *원본 URL:* ${draft.product.productUrl}`,
+        `🛒 상품: ${safeProductTitle}...`,
+        `💰 가격: ${priceStr}원`,
+        `📦 플랫폼: ${platformName}`,
+        `🔗 원본 URL: ${draft.product.productUrl}`,
         ``,
-        `📄 *본문 미리보기 (첫 200자):*`,
-        `${draft.content.substring(0, 200)}...`,
+        `📄 본문 미리보기:`,
+        `${safePreview}...`,
         ``,
         `━━━━━━━━━━━━━━━━━━━━`,
-        `⚠️ *[Phase 0 - 수동 링크 필요]*`,
-        `아래 링크 변환기에서 어필리에이트 링크를 만들어 주세요:`,
-        ``,
         draft.product.platform === 'coupang'
             ? `🔗 쿠팡 파트너스: https://partners.coupang.com`
             : `🔗 알리 포털: https://portals.aliexpress.com/affiportals/web/link_generator.htm`,
         ``,
-        `변환된 링크를 아래 [✏️ 링크 입력] 버튼을 눌러 붙여넣어 주세요.`,
+        `변환된 링크를 아래 버튼을 눌러 붙여넣어 주세요.`,
     ].join('\n');
 
     const replyMarkup = {
@@ -60,21 +62,13 @@ export async function sendDraftForApproval(draft: BlogDraft, index: number): Pro
         try {
             await bot.sendPhoto(CHAT_ID, draft.imageUrl, {
                 caption: message.substring(0, 1024),
-                parse_mode: 'Markdown',
                 reply_markup: replyMarkup,
             });
         } catch {
-            // 이미지 전송 실패 시 텍스트로 폴백
-            await bot.sendMessage(CHAT_ID, message, {
-                parse_mode: 'Markdown',
-                reply_markup: replyMarkup,
-            });
+            await bot.sendMessage(CHAT_ID, message, { reply_markup: replyMarkup });
         }
     } else {
-        await bot.sendMessage(CHAT_ID, message, {
-            parse_mode: 'Markdown',
-            reply_markup: replyMarkup,
-        });
+        await bot.sendMessage(CHAT_ID, message, { reply_markup: replyMarkup });
     }
 
     console.log(`📨 텔레그램 전송 완료: 초안 #${index + 1}`);
