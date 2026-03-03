@@ -5,10 +5,40 @@ import { fileURLToPath } from 'url';
 import type { BlogDraft } from './generate-blog.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ENV_PATH = path.resolve(__dirname, '../.env');
 
 const BLOGGER_API = 'https://www.googleapis.com/blogger/v3';
 const BLOG_ID = process.env.BLOGGER_BLOG_ID!;
-const ACCESS_TOKEN = process.env.BLOGGER_ACCESS_TOKEN!;
+
+// .env에서 최신 토큰을 실시간으로 읽어오는 함수
+function getAccessToken(): string {
+    const envContent = fs.readFileSync(ENV_PATH, 'utf-8');
+    const match = envContent.match(/BLOGGER_ACCESS_TOKEN="([^"]+)"/);
+    return match ? match[1] : process.env.BLOGGER_ACCESS_TOKEN!;
+}
+
+// refresh_token으로 새 access_token 발급
+async function refreshToken(): Promise<string> {
+    const res = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+            client_id: process.env.BLOGGER_CLIENT_ID!,
+            client_secret: process.env.BLOGGER_CLIENT_SECRET!,
+            refresh_token: process.env.BLOGGER_REFRESH_TOKEN!,
+            grant_type: 'refresh_token',
+        }),
+    });
+    const data = await res.json() as any;
+    if (!res.ok || !data.access_token) throw new Error(`토큰 갱신 실패: ${JSON.stringify(data)}`);
+
+    // .env에 새 토큰 저장
+    let envContent = fs.readFileSync(ENV_PATH, 'utf-8');
+    envContent = envContent.replace(/BLOGGER_ACCESS_TOKEN="[^"]*"/, `BLOGGER_ACCESS_TOKEN="${data.access_token}"`);
+    fs.writeFileSync(ENV_PATH, envContent);
+    console.log('🔄 Blogger access token 자동 갱신 완료');
+    return data.access_token;
+}
 
 export async function postToBlogger(draft: BlogDraft): Promise<string> {
     // 어필리에이트 링크 자리 교체
@@ -34,30 +64,36 @@ export async function postToBlogger(draft: BlogDraft): Promise<string> {
         ? ['쿠팡', '어필리에이트', '추천상품', '최저가']
         : ['알리익스프레스', '해외직구', '추천상품', '핫딜'];
 
-    const body = {
-        title: draft.title,
-        content: contentWithImage,
-        labels,
-    };
+    const body = { title: draft.title, content: contentWithImage, labels };
 
-    const response = await fetch(`${BLOGGER_API}/blogs/${BLOG_ID}/posts`, {
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${ACCESS_TOKEN}`,
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-    });
+    // 포스팅 시도 (401이면 토큰 갱신 후 재시도)
+    for (let attempt = 0; attempt < 2; attempt++) {
+        const token = attempt === 0 ? getAccessToken() : await refreshToken();
 
-    const result = await response.json() as any;
+        const response = await fetch(`${BLOGGER_API}/blogs/${BLOG_ID}/posts`, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
 
-    if (response.ok && result.url) {
-        console.log(`✅ Blogger 포스팅 성공: ${result.url}`);
-        return result.url;
-    } else {
+        const result = await response.json() as any;
+
+        if (response.ok && result.url) {
+            console.log(`✅ Blogger 포스팅 성공: ${result.url}`);
+            return result.url;
+        }
+
+        if (response.status === 401 && attempt === 0) {
+            console.log('⚠️ 토큰 만료 감지, 자동 갱신 후 재시도...');
+            continue; // 갱신 후 재시도
+        }
+
         throw new Error(`Blogger 포스팅 실패: ${JSON.stringify(result)}`);
     }
+
+    throw new Error('Blogger 포스팅 실패: 재시도 한도 초과');
 }
+
 
 // 승인된 초안 포스팅
 async function main() {

@@ -9,12 +9,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
 
 export interface BlogDraft {
+    id: string;           // 중복 방지용 고유 ID
     product: Product;
     title: string;
     content: string;
-    affiliateLink: string; // Phase 0: 수동 입력 예정
+    affiliateLink: string;
     imageUrl: string;
     generatedAt: string;
+    sent: boolean;        // 텔레그램 전송 여부
+    posted: boolean;      // 블로그 포스팅 여부
 }
 
 export async function generateBlogDraft(product: Product): Promise<BlogDraft> {
@@ -97,12 +100,15 @@ CONTENT:
     console.log(`✍️  블로그 초안 생성 완료: "${title}"`);
 
     return {
+        id: `${product.platform}_${product.id}_${Date.now()}`,
         product,
         title,
         content,
-        affiliateLink: '', // Phase 0: 텔레그램에서 수동 입력 받음
+        affiliateLink: '',
         imageUrl: product.imageUrl,
         generatedAt: new Date().toISOString(),
+        sent: false,
+        posted: false,
     };
 }
 
@@ -116,15 +122,26 @@ async function main() {
     const products: Product[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
     console.log(`📝 ${products.length}개 상품의 블로그 초안을 생성합니다...\n`);
 
-    const drafts: BlogDraft[] = [];
+    // 기존 초안 로드 (풀 유지용)
+    const outputPath = path.resolve(__dirname, '../data/drafts.json');
+    const existingDrafts: BlogDraft[] = fs.existsSync(outputPath)
+        ? JSON.parse(fs.readFileSync(outputPath, 'utf-8'))
+        : [];
+    const existingIds = new Set(existingDrafts.map(d => d.product?.id));
+
+    const newDrafts: BlogDraft[] = [];
     for (const product of products) {
+        if (existingIds.has(product.id)) continue; // 중복 방지
         const draft = await generateBlogDraft(product);
-        drafts.push(draft);
+        newDrafts.push(draft);
     }
 
-    const outputPath = path.resolve(__dirname, '../data/drafts.json');
-    fs.writeFileSync(outputPath, JSON.stringify(drafts, null, 2), 'utf-8');
-    console.log(`\n💾 블로그 초안 ${drafts.length}개 저장 완료: ${outputPath}`);
+    // 기존 초안 + 신규 초안 합쳐서 저장 (append)
+    const allDrafts = [...existingDrafts, ...newDrafts];
+    fs.writeFileSync(outputPath, JSON.stringify(allDrafts, null, 2), 'utf-8');
+
+    const unsentCount = allDrafts.filter(d => !d.sent).length;
+    console.log(`\n💾 블로그 초안 ${newDrafts.length}개 추가, 총 ${allDrafts.length}개 저장 (미전송: ${unsentCount}개)`);
 }
 
 main().catch(console.error);

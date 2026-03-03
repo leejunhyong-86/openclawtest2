@@ -81,6 +81,8 @@ export async function sendDraftForApproval(draft: BlogDraft, index: number): Pro
 }
 
 async function main() {
+    const DAILY_SEND_LIMIT = 3; // 하루 전송 개수
+
     const draftsPath = path.resolve(__dirname, '../data/drafts.json');
     if (!fs.existsSync(draftsPath)) {
         console.error('❌ data/drafts.json 파일이 없습니다. generate-blog를 먼저 실행하세요.');
@@ -88,20 +90,38 @@ async function main() {
     }
 
     const drafts: BlogDraft[] = JSON.parse(fs.readFileSync(draftsPath, 'utf-8'));
-    console.log(`📨 ${drafts.length}개의 블로그 초안을 텔레그램으로 전송합니다...\n`);
 
-    for (let i = 0; i < drafts.length; i++) {
-        await sendDraftForApproval(drafts[i], i);
-        // 메시지 간 딜레이 (텔레그램 Rate Limit 방지)
-        await new Promise(resolve => setTimeout(resolve, 1000));
+    // 아직 전송 안 된 초안만 필터링
+    const unsentDrafts = drafts.filter(d => !d.sent);
+    const toSend = unsentDrafts.slice(0, DAILY_SEND_LIMIT);
+
+    console.log(`📨 미전송 초안 ${unsentDrafts.length}개 중 ${toSend.length}개를 텔레그램으로 전송합니다...\n`);
+
+    if (toSend.length === 0) {
+        await bot.sendMessage(CHAT_ID, '📭 오늘 전송할 새 초안이 없습니다. 초안 풀을 다시 채워주세요.');
+        return;
     }
 
+    for (let i = 0; i < toSend.length; i++) {
+        // 전체 배열에서 해당 draft의 실제 인덱스 사용 (버튼 콜백용)
+        const realIndex = drafts.findIndex(d => d.id === toSend[i].id);
+        await sendDraftForApproval(toSend[i], realIndex);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // sent 마킹
+        drafts[realIndex].sent = true;
+    }
+
+    // drafts.json 업데이트 (sent 상태 저장)
+    fs.writeFileSync(draftsPath, JSON.stringify(drafts, null, 2), 'utf-8');
+
+    const remaining = drafts.filter(d => !d.sent).length;
     await bot.sendMessage(CHAT_ID,
-        `✅ *총 ${drafts.length}개의 초안을 전송했습니다.*\n각 초안별로 승인/링크입력/건너뜀을 선택해 주세요.\n\n📌 승인된 글은 자동으로 티스토리에 포스팅됩니다.`,
+        `✅ *총 ${toSend.length}개의 초안을 전송했습니다.*\n각 초안별로 승인/링크입력/건너뜀을 선택해 주세요.\n\n📌 승인된 글은 자동으로 Blogger에 포스팅됩니다.\n📦 남은 초안: *${remaining}개* (약 ${Math.ceil(remaining / DAILY_SEND_LIMIT)}일치)`,
         { parse_mode: 'Markdown' }
     );
 
-    console.log(`\n✅ 모든 초안 전송 완료! 텔레그램에서 승인해 주세요.`);
+    console.log(`\n✅ 전송 완료! 남은 미전송 초안: ${remaining}개`);
 }
 
 main().catch(console.error);
