@@ -107,7 +107,11 @@ async function fetchAliProducts(keyword = 'hot deals', limit = 5): Promise<Produ
 }
 
 async function main() {
-    const coupangProducts = await fetchCoupangProducts(COUPANG_TARGET_URLS, 3);
+    const COUPANG_LIMIT = 3;  // 쿠팡 수집 개수
+    const ALI_LIMIT = 2;      // 알리 수집 개수
+
+    const coupangProducts = (await fetchCoupangProducts(COUPANG_TARGET_URLS, COUPANG_LIMIT))
+        .slice(0, COUPANG_LIMIT);  // 액터가 maxProducts를 무시할 경우를 대비
 
     // 알리 Actor ID가 설정된 경우에만 수집
     const aliProducts = process.env.APIFY_ALI_ACTOR_ID && process.env.APIFY_ALI_ACTOR_ID !== 'your_aliexpress_actor_id'
